@@ -125,7 +125,9 @@ router.get('/contact', async (req, res) => {
 
     try {
 
-        res.render('contact',);
+        res.render('contact', {
+            currentRoute: '/contact'
+        });
     } catch (error) {
         console.log(error);
     }
@@ -137,15 +139,7 @@ router.get('/contact', async (req, res) => {
  * Get - About
  */
 
-router.get('/about', async (req, res) => {
 
-    try {
-
-        res.render('about',);
-    } catch (error) {
-        console.log(error);
-    }
-});
 
 
 module.exports = router;

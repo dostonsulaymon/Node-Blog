@@ -82,6 +82,68 @@ img {
     padding: 0 10px;
 }
 
+/* Styles for the container element */
+.container2 {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #f0f0f0;
+    /* Light gray background */
+}
+
+/* Styles for the heading (H1) */
+.contact-h1 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 15px;
+    color: #333;
+    /* Darker gray for text */
+}
+
+/* Styles for the subheading (H2) */
+.contact-h2 {
+    text-align: center;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Styles for the contact methods list */
+.contact-methods {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Styles for each list item */
+.contact-methods li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+/* Styles for the links within the list items */
+.contact-methods li a {
+    text-decoration: none;
+    color: #000;
+    /* Black for link text */
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+/* Styles for the social media icons */
+.contact-methods li i {
+    font-size: 20px;
+    color: #333;
+    /* Darker gray for icons */
+}
+
+/* Hover effect for the links */
+.contact-methods li a:hover {
+    color: #007bff;
+    /* Blue hover color */
+}
+
 .main {
     padding: 20px 0;
 }
@@ -93,6 +155,9 @@ img {
     overflow: hidden;
     border-radius: var(--border-radius);
 }
+
+
+
 
 
 /* Main Header */
@@ -381,6 +446,6 @@ img {
 
 .post-links a:hover {
     background-color: #eee;
-    
+
     /* Optional hover effect */
 }
