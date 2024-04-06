@@ -1,54 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add New Post</title>
-    <!-- Include Bootstrap CSS -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-</head>
-<body>
-
-<div class="container">
-    <a href="/dashboard" class="btn btn-secondary">&larr; Back</a>
-    <div class="admin-title">
-        <h2>Add New Post</h2>
-    </div>
-
-    <form action="/add-post" method="POST" enctype="multipart/form-data">
-        <div class="form-group">
-            <label for="title"><b>Title</b></label>
-            <input type="text" class="form-control" placeholder="Post Title" name="title">
-        </div>
-
-        <div class="form-group">
-            <label for="body"><b>Content</b></label>
-            <textarea class="form-control" name="body" rows="10"></textarea>
-        </div>
-
-        <div class="form-group">
-            <label for="images"><b>Images</b></label>
-            <input type="file" class="form-control-file" name="images[]" accept="image/*" multiple>
-        </div>
-
-        <div class="form-group">
-            <label for="text-type"><b>Text Type</b></label>
-            <select class="form-control" name="text-type">
-                <option value="normal">Normal</option>
-                <option value="bold">Bold</option>
-                <option value="italic">Italic</option>
-                <option value="underline">Underline</option>
-            </select>
-        </div>
-
-        <button type="submit" class="btn btn-primary">Add</button>
-    </form>
+<a href="/dashboard">&larr; Back</a>
+<div class="admin-title">
+    <h2>Add New Post</h2>
 </div>
 
-<!-- Include Bootstrap JS (optional, only needed if you use Bootstrap JavaScript features) -->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<form action="/add-post" method="POST">
 
-</body>
-</html>
+    <label for="title"><b>Title</b></label>
+    <input type="text" placeholder="Post Title" name="title">
+
+    <label for="body"><b>Content</b></label>
+    <textarea name="body" cols="50" rows="10"></textarea>
+
+    <input type="submit" value="Add" class="btn">
+
+</form>
