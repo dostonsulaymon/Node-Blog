@@ -10,7 +10,7 @@ router.get('', async (req, res) => {
     try {
         const locals = {
             title: "Doston's Blog",
-            description: "Simple Blog created with NodeJs, Express & MongoDb."
+            description: "I am Doston Sulaymon, a 22-year-old Software Engineer from Tashkent, Uzbekistan"
         }
 
         let perPage = 10;
