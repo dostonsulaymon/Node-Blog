@@ -6,10 +6,13 @@ const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 
 
+
 const router = express();
 
 const adminLayout = '../views/layouts/admin';
 const jwtSecret = process.env.JWR_SECRET;
+
+const description = "I am Doston Sulaymon, a 22-year-old Software Engineer from Tashkent, Uzbekistan";
 
 /**
  * 
@@ -100,7 +103,7 @@ router.get('/dashboard', authMiddleware, async (req, res) => {
     try {
         const locals = {
             title: 'Dashboard',
-            description: 'Simple Blog created with NodeJs, Express & MongoDb.'
+            description: description
         }
 
         const data = await Post.find();
@@ -126,7 +129,7 @@ router.get('/add-post', authMiddleware, async (req, res) => {
     try {
         const locals = {
             title: 'Add Post',
-            description: 'Simple Blog created with NodeJs, Express & MongoDb.'
+            description: description
         }
 
         const data = await Post.find();
