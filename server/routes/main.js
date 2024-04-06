@@ -2,6 +2,8 @@ const express = require('express');
 const router = express.Router();
 const Post = require('../models/Post');
 
+const description = "I am Doston Sulaymon, a 22-year-old Software Engineer from Tashkent, Uzbekistan";
+
 /**
  * GET /
  * HOME
@@ -10,7 +12,7 @@ router.get('', async (req, res) => {
     try {
         const locals = {
             title: "Doston's Blog",
-            description: "I am Doston Sulaymon, a 22-year-old Software Engineer from Tashkent, Uzbekistan"
+            description: description
         }
 
         let perPage = 10;
@@ -54,7 +56,7 @@ router.get('/post/:id', async (req, res) => {
 
         const locals = {
             title: data.title,
-            description: "Simple Blog created with NodeJs, Express & MongoDb.",
+            description: description
         }
 
         res.render('post', {
@@ -77,7 +79,7 @@ router.post('/search', async (req, res) => {
     try {
         const locals = {
             title: "Seach",
-            description: "Simple Blog created with NodeJs, Express & MongoDb."
+            description: description
         }
 
         let searchTerm = req.body.searchTerm;
